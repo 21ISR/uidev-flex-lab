@@ -7,6 +7,8 @@ body {
     font-family: Arial, sans-serif;
 }
 .container {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 .header,
@@ -20,6 +22,8 @@ body {
     background: #444;
     color: white;
     padding: 15px;
+    display: flex;
+    justify-content: center;
 
     gap: 15px;
 }
@@ -29,25 +33,34 @@ body {
     font-weight: bold;
 }
 .main {
+    display: flex;
+    flex-grow:1;
     padding: 20px;
     gap: 20px;
 }
 .sidebar {
+    width:250px;
     background: #f4f4f4;
     padding: 20px;
     width: 25%;
 }
 .content {
+    display:flex;
+    flex-direction: column;
+    flex-grow: 2;
     background: #ddd;
     padding: 20px;
     gap: 20px;
 }
 .section {
+    flex:1;
     background: white;
     padding: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .card-container {
+    display:flex;
+    flex-wrap: wrap;
     gap: 15px;
     width: 100%;
 }
@@ -56,6 +69,7 @@ body {
     padding: 15px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    flex-basis: calc((100% - 30px)/3);
 }
 .footer {
     margin-top: 20px;
